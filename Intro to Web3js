@@ -1,0 +1,35 @@
+ Web3js allow us to contact to blockachin by a website through JSON RPC Protocol.
+ 
+ Prerequisites tools: 
+          1. Node.
+          2. Infura - Way for you get access to ethereum node through JSON RPC very Quickly.
+          3. Ether scan - Has all information about accounts and transaction.
+          4. Ganache - Ganache is used for setting up a personal Ethereum Blockchain for testing your Solidity contracts.
+          
+Web3js Installation : 
+      npm install web3
+      
+      
+var Web3 = require('web3')
+>> Web3
+var url = <Ethereum network url form Infura>
+>> url 
+var web3 = new Web3(url)
+>> web3 
+// return properties and available methods ...
+var address = <Address of an account>
+
+web3.eth.getBalance(address, (err, bal) => { balance = bal }) //return balance amount in gwei
+
+web3.utils.fromWei(balance , 'ether') // convert Wei to ether
+web3.utils.fromWei(balance , 'Gwei')
+web3.utils.fromWei(balance , 'gwei')
+
+web3.eth.accounts.create() // Create a new account.
+
+var web3 = new Web3(<Ganache Port Number>)
+
+
+
+
+
