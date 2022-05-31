@@ -1,0 +1,17 @@
+
+web3.eth.Contract :
+          The web3. eth. Contract object makes it easy to interact with smart contracts on the ethereum blockchain. When you create a new contract object 
+you give it the json interface of the respective smart contract and web3 will auto convert all calls into low level ABI calls over RPC for you.
+
+var abi = <abi of a contract from ether scan>
+var address = <address>
+var ContactAddress = <address of the Contract>
+
+var contract = new web3.eth.Contract(abi, ContractAddress)
+>> contract
+>> contract.methods
+
+>> contract.methods.name().call()
+>> contract.methods.name().call((err, result) => { console.log(result) })
+
+
